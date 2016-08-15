@@ -1,0 +1,1 @@
+json.array! @activity_sessions, partial: 'activity_sessions/activity_session', as: :activity_session

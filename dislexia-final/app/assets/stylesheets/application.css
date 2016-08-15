@@ -1,0 +1,117 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+.corpo{
+	background-image: url('fundo.jpg');
+	background-attachment: fixed;
+	background-repeat: repeat;
+	width: auto;
+}
+.pagina{
+	background: #e6fff5;
+	/* para deixar transparente*/
+	border: 1px solid black;
+  	opacity: 0.9;
+  	filter: alpha(opacity=20);
+  	
+  	border: 1px solid #e6fff5;
+	position: center;
+	margin-right: 95px;
+	margin-left: 95px;
+	margin-top: 0px;
+	margin-bottom: 40px;
+	height: auto;
+
+}
+
+.titulo{
+	
+	background: #4d79ff;
+	/*position: fixed; colocar em posição fixado*/ 
+	position: fixed;
+	padding-top: 7px;
+	margin-top: -5px;
+	margin-bottom: 0px;
+	border: 1px solid #4d79ff;
+	color: #fff;
+	width: 1160px;
+	height: 136px;
+	
+}
+
+
+.menus,li{
+	display: inline-block;
+	background: #4d79ff;
+	border-radius: 25px;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 4px 4px 0 0;
+    font-size: 15px;
+   	margin-bottom: -30px;
+}
+
+a:hover {
+    background-color: #7300e6;
+}
+
+.rodape{
+	background: #4d79ff; 
+	position: center;
+	border: 1px solid #4d79ff;
+	color: #fff;
+	width: 1160px;
+	height: 180px;
+	text-align: center;
+}
+
+
+img{
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+}
+
+.texto{
+	text-align: justify;
+	margin: 80px;
+	font-size: 12px;
+	font-family: arial, comic, serif;
+}
+
+h1,
+h3{
+	text-align: center;
+}
+
+th{
+	display: inline-block;
+	margin: 7px;
+	background-color: #4d79ff;
+	border-radius: 15px 50px 30px 5px;
+	padding: 3px;
+	color: #fff;
+}
+
+.atividade{
+	text-align: justify;
+	margin: 80px;
+	font-size: 12px;
+	font-family: arial, comic, serif;
+
+}
+
+

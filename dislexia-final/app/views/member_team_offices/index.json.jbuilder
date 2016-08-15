@@ -1,0 +1,1 @@
+json.array! @member_team_offices, partial: 'member_team_offices/member_team_office', as: :member_team_office

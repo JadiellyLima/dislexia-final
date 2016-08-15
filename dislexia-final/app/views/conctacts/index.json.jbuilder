@@ -1,0 +1,1 @@
+json.array! @conctacts, partial: 'conctacts/conctact', as: :conctact

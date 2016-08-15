@@ -1,0 +1,1 @@
+json.partial! "activity_sessions/activity_session", activity_session: @activity_session

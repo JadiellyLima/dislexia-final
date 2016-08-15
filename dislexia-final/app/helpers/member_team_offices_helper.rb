@@ -1,0 +1,2 @@
+module MemberTeamOfficesHelper
+end

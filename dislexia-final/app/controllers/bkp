@@ -1,0 +1,14 @@
+rails g scaffold activity  name
+rails g scaffold student name old:date note:text 
+rails g scaffold session name date_session
+rails g scaffold responsable_student name phone student:references
+
+rails g scaffold member_team_office function
+
+rails generate devise User name
+
+rails g scaffold member_team name phone member_team_office:references
+
+rails g scaffold activity_session session:references activity:references member_team:references student:references
+
+rails g controller home index

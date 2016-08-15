@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dislexia</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  
+  <!--meta n
+  ame="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script-->
+</head>
+<body class = "corpo">
+	<div class = "pagina text-center">
+		<div class = "tituloEmenu">
+			<div class="titulo">
+				<h1><b>Seja Bem Vindo!</b></h1>
+
+				<div class = "menus">
+					
+					<ul>
+						<li><a href="http://localhost:3000/">Home</a> </li>
+						<li><%= link_to 'Administracao', '/administracao' %>
+						</li>
+						<li><%= link_to 'Estudante',static_estudante_path %></li>
+						<li><%= link_to 'Atividades',static_atividades_path %></li>
+						<li><%= link_to 'Equipe Multidisciplinar',static_equipe_path %></li>
+						<li><%= link_to 'Pais',static_pais_path %></li>
+						<li><%= link_to 'Sobre nós',static_sobrenos_path %></li>
+						<li><%= link_to 'Contatos', new_conctact_path %></li>
+					</ul>
+
+				</div>
+			
+			</div>
+			
+		</div>
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<% flash.each do |type, message| %>
+ 			 <div class="alert-success" style="height: 55px;font-size:28px;margin-top:12px;">
+  			  <%= message %>
+  			</div>
+		<% end %>
+		<%= yield %>
+		<br />
+		<br />
+		
+			<footer class = "rodape text-center">
+
+				<ul>
+					<li><a href = "https://www.facebook.com/jade.lima.731" target="_blank" ><%= image_tag("face.png", :alt => "facebook") %></a></li>
+					<li><a href="https://twitter.com/limajade10" target="_blank" ><%=image_tag("twitter.png", :alt => "twitter") %></a></li>
+					<li><a href="https://www.instagram.com/limajade10/" target="_blank" ><%= image_tag("insta.png", :alt => "instagram") %></a></li>
+				</ul>
+				<div class = "rodap">
+					<p>By Jadielly Lima</p>
+					<p>Bacharelado em Sistemas de Informação</p>
+					<p>Universidade Federal do Piauí - UFPI</p>
+					<p>Picos - PI</p>
+				</div>
+				
+
+			</footer>
+			
+	</div>
+	
+</body>
+</html>

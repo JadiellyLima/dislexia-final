@@ -1,0 +1,42 @@
+<%- model_class = ActivitySession -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:session_id) %></th>
+      <th><%= model_class.human_attribute_name(:activity_id) %></th>
+      <th><%= model_class.human_attribute_name(:member_team_id) %></th>
+      <th><%= model_class.human_attribute_name(:student_id) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @activity_sessions.each do |activity_session| %>
+      <tr>
+        <td><%= link_to activity_session.id, activity_session_path(activity_session) %></td>
+        <td><%= activity_session.session.name %></td>
+        <td><%= activity_session.activity.name %></td>
+        <td><%= activity_session.member_team.name %></td>
+        <td><%= activity_session.student.name %></td>
+        <td>
+          <%= link_to t('.show', :default => t("helpers.links.show")),
+                      activity_session_path(activity_session), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_activity_session_path(activity_session), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      activity_session_path(activity_session),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-xs btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_activity_session_path,
+            :class => 'btn btn-primary' %>

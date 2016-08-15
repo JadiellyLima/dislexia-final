@@ -1,0 +1,1 @@
+json.partial! "responsable_students/responsable_student", responsable_student: @responsable_student
